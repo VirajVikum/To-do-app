@@ -1,0 +1,7 @@
+[B]in/
+[O]bj/
+.vs/
+*.user
+appsettings.Development.json
+*.mdf
+*.ldf
