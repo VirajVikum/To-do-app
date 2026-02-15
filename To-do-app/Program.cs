@@ -16,9 +16,6 @@ builder.Services.AddControllers()
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
     });
 
-var app = builder.Build();
-
-//Enable cors
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -29,6 +26,11 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
+
+var app = builder.Build();
+
+//Enable cors
+
 
 app.UseCors("AllowAll");
 
